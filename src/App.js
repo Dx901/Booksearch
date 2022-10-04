@@ -47,6 +47,27 @@ const App = () => {
           <button type='submit'>Search</button>
         </label>
       </form>
+
+      {/* UI for books search result */}
+      <ul>
+        {
+          books.items.map((book, index) => {
+            return (
+              <li key={index}>
+                <div>
+                  <img alt = {`${book.volumeInfo.title}book`} src={`http://books.goog;e.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`} />
+                  <div>
+                    <h3>{book.volumeInfo.title}</h3>
+                    <p>{book.volumeInfo.publishedDate}</p>
+                  </div>
+                
+                </div>
+                <hr />
+
+              </li>
+            )
+          })}
+      </ul>
     </section>
   )
 }
