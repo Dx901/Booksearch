@@ -7,7 +7,7 @@ const Main = () => {
     const searchBook= (evt) => {
         if (evt.key==="Enter")
         {
-            axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCIGIoQNdyPB7k_fDH_NKR_hdZRiY6ufvk')
+            axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCIGIoQNdyPB7k_fDH_NKR_hdZRiY6ufvk'+'&maxResults=40')
             //console.log("Dyes built it")
             // .then (res=>console.log(res.data.items))
             .then (res=>setData(res.data.items))
