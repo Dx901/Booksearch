@@ -1,8 +1,9 @@
 import React from "react";
+import Card from "./Card";
 
 const Main = () => {
     return (
-        <React.Fragment>
+        <>
 
             <div className="header">
                 <div className="row1">
@@ -13,14 +14,23 @@ const Main = () => {
                 
                     <div className="search">
                         <input type="text" placeholder="Enter A Book Name"/>
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
-
-                    
+                        <button><i className="fas fa-search"></i></button>
+                    </div>   
                     <img src="./images/img4.png" alt=""/>
                 </div>
             </div>
+            <div className="container">
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+                    <Card/> 
+               
             </div>
-        </React.Fragment>
+        </>
     )
 }
 export default Main;
