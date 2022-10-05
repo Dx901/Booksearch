@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
-
+import axios from "axios";
 const Main = () => {
+    const[ search, setSearch]= useState('')
+    const [bookData, setData]= useState([])
+    const searchBook= (evt) => {
+        if (evt.key==="Enter")
+        {
+            axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCIGIoQNdyPB7k_fDH_NKR_hdZRiY6ufvk')
+            //console.log("Dyes built it")
+            // .then (res=>console.log(res.data.items))
+            .then (res=>setData(res.data.items))
+            .catch(err=>console.log(err))
+
+        }
+    }
     return (
         <>
 
@@ -13,24 +26,27 @@ const Main = () => {
                     <h2>Find A book</h2>
                 
                     <div className="search">
-                        <input type="text" placeholder="Enter A Book Name"/>
+                        <input type="text" placeholder="Enter A Book Name"
+                        value={search} onChange= {e => setSearch(e.target.value)}
+                        onKeyPress={searchBook}/>
                         <button><i className="fas fa-search"></i></button>
                     </div>   
                     <img src="./images/img4.png" alt=""/>
                 </div>
             </div>
             <div className="container">
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-                    <Card/> 
-               
+            {
+                <Card book={bookData}/>
+
+            }
+                   
             </div>
         </>
     )
 }
 export default Main;
+
+
+
+
+//AIzaSyACMA-5AdAbcikhxGoncUzn4-nNblF5k5g      first api key
