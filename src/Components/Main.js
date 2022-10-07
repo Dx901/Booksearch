@@ -20,7 +20,8 @@ const Main = () => {
 
             <div className="header">
                 <div className="row1">
-                    <h1>The more that you read the more you will know<br/>The more you learn the more places you will go</h1>
+                    <h1>The more that you read, the more you will know.<br/>The more you learn, the more places you will go.</h1>
+                    <h5>Dyes Junior-1650</h5>
                 </div>
                 <div className="row2">
                     <h2>Find A book</h2>

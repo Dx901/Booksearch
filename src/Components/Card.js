@@ -11,7 +11,7 @@ const Card = ({ book }) => {
       {book.map((item) => {
         let thumbnail = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.smallThumbnail
         //let amount = item.saleInfo.saleability
-        if (thumbnail!= undefined)
+        if (thumbnail!== undefined)
         {
             return (
                 <React.Fragment>
