@@ -2,10 +2,24 @@
 
 #Table Of Contetnts
 
+.Objectives
 .General Info
 .Technologies Used
 .SetUp
-.Status
+
+##Objectives
+
+For tis project this is what I aim to achieve
+
+###Build a book finder app that enables a user to:
+
+    -Search for a book
+    -Return results if any for that match that specific task specific search
+    -Be able to see a preview of a book that you click on
+    -When a button is clicked in the preview section, then the user will be directed to the book 
+    page in Google Books
+
+****
 
 ##General info
 
@@ -14,11 +28,11 @@ After a search is made, if a book is abailable in the server, then it displays t
 
 ***
 
-#Technologies && Commands
+#Technologies 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#Setup
 
 In the project directory, you can run:
 
